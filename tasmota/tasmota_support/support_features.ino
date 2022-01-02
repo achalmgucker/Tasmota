@@ -127,7 +127,7 @@ constexpr uint32_t feature[] = {
 #ifdef FIRMWARE_MINIMAL
   0x00000002 |  // user_config(_override).h
 #endif
-#ifdef FIRMWARE_SENSORS
+#if defined(FIRMWARE_SENSORS) || defined(FIRMWARE_WL) 
   0x00000004 |  // user_config(_override).h
 #endif
 #ifdef FIRMWARE_CLASSIC
